@@ -1,4 +1,4 @@
-package com.web.sample.service;
+package com.mybiz.web.sample.service;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,8 +10,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
 
-import com.web.constants.NewConstants;
-import com.web.sample.domain.CurrencyDomain;
+import com.mybiz.constants.NewConstants;
+import com.mybiz.web.sample.domain.CurrencyDomain;
 
 
 @Service

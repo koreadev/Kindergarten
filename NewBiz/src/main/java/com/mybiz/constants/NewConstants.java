@@ -1,4 +1,4 @@
-package com.web.constants;
+package com.mybiz.constants;
 
 public interface NewConstants {
 	public String EXCHANGE_URL = "http://community.fxkeb.com/fxportal/jsp/RS/DEPLOY_EXRATE/fxrate_all.html";

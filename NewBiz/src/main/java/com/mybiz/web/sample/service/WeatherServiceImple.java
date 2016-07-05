@@ -1,4 +1,4 @@
-package com.web.sample.service;
+package com.mybiz.web.sample.service;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -12,8 +12,8 @@ import net.aksingh.java.api.owm.Tools.Convertor;
 import org.json.JSONException;
 import org.springframework.stereotype.Service;
 
-import com.web.constants.NewConstants;
-import com.web.sample.domain.WeatherDomain;
+import com.mybiz.constants.NewConstants;
+import com.mybiz.web.sample.domain.WeatherDomain;
 
 @Service
 public class WeatherServiceImple {
