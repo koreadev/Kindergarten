@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <comment>messages-properties</comment>
+
+  <!-- login message -->
+  <entry key="login.Login">Login</entry>
+  <entry key="login.login">login</entry>
+  <entry key="login.registed">Registed PC</entry>
+  <entry key="login.n.registed">Non Registed PC</entry>
+  <entry key="login.username">username</entry>
+  <entry key="login.password">password</entry>
+
+
+</properties>

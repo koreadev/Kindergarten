@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <comment>messages-properties_ko</comment>
+
+  <!-- login message -->
+  <entry key="login.Login">통합인증</entry>
+  <entry key="login.login">login</entry>
+  <entry key="login.registed">등록 PC</entry>
+  <entry key="login.n.registed">미등록 PC</entry>
+  <entry key="login.username">username</entry>
+  <entry key="login.password">password</entry>
+
+</properties>
