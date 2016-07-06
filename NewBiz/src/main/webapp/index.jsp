@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c"      uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn"     uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt"    uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn"     uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"  %>
+<%@ taglib prefix="form"   uri="http://www.springframework.org/tags/form" %>
 
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Welcome</title>
-	</head>
-	<body>
-		<c:url value="/showMessage" var="messageUrl" />
-		<a href="${messageUrl}">Click to enter</a>
-	</body>
+<head>
+	<title>All-In-One Connection</title>
+	<%@ include file="/WEB-INF/view/common/include/meta.jsp"%>
+	<%@ include file="/WEB-INF/view/common/include/css.jsp"%>
+	<%@ include file="/WEB-INF/view/common/include/js.jsp"%>
+
+	<script type="text/javascript">
+	$(document).ready(function () {
+		var causeObj = "${cause}";
+		if (causeObj != null && causeObj != "") {
+			location.href = "${pageContext.request.contextPath}/login?cause=${cause}";
+		} else {
+			location.href = "${pageContext.request.contextPath}/login";
+		}
+	});
+	</script>
+</head>
+<body>
+
+</body>
 </html>

@@ -27,15 +27,16 @@
     	<springframework.security-version>4.0.4.RELEASE</springframework.security-version>
     	<servlet-version>3.1.0</servlet-version>
 
-		<!-- Hibernate / JPA -->
-		<hibernate.version>4.2.1.Final</hibernate.version>
-
 		<!-- Logging -->
 		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
 
 		<!-- Test -->
 		<junit.version>4.11</junit.version>
+
+		<maven.compiler.version>3.2</maven.compiler.version>
+	    <maven.war.version>2.5</maven.war.version>
+	    <tomcat.version>2.2</tomcat.version>
 
 	</properties>
 
@@ -85,23 +86,22 @@
 	      </exclusions>
 	    </dependency>
 
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>${servlet-version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>javax.servlet.jsp</groupId>
-      <artifactId>javax.servlet.jsp-api</artifactId>
-      <version>2.3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
-    </dependency>
-
+	    <dependency>
+	      <groupId>javax.servlet</groupId>
+	      <artifactId>javax.servlet-api</artifactId>
+	      <version>${servlet-version}</version>
+	      <scope>provided</scope>
+	    </dependency>
+	    <dependency>
+	      <groupId>javax.servlet.jsp</groupId>
+	      <artifactId>javax.servlet.jsp-api</artifactId>
+	      <version>2.3.1</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>javax.servlet</groupId>
+	      <artifactId>jstl</artifactId>
+	      <version>1.2</version>
+	    </dependency>
 
 		<!-- Logging with SLF4J & LogBack -->
 		<dependency>
@@ -117,12 +117,16 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- Hibernate -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate.version}</version>
-		</dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-core</artifactId>
+	        <version>2.4.3</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-databind</artifactId>
+	        <version>2.4.3</version>
+	    </dependency>
 
 
 		<!-- Test Artifacts -->

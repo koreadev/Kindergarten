@@ -5,19 +5,19 @@ import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.aksingh.java.api.owm.CurrentWeatherData;
-import net.aksingh.java.api.owm.OpenWeatherMap;
-import net.aksingh.java.api.owm.Tools.Convertor;
-
 import org.json.JSONException;
 import org.springframework.stereotype.Service;
 
 import com.mybiz.constants.NewConstants;
 import com.mybiz.web.sample.domain.WeatherDomain;
 
+import net.aksingh.java.api.owm.CurrentWeatherData;
+import net.aksingh.java.api.owm.OpenWeatherMap;
+import net.aksingh.java.api.owm.Tools.Convertor;
+
 @Service
 public class WeatherServiceImple {
-	
+
 
 	public List<WeatherDomain> getWorldWeather() throws IOException, MalformedURLException, JSONException {
 		List<WeatherDomain> weathers = new ArrayList<WeatherDomain>();
@@ -28,7 +28,7 @@ public class WeatherServiceImple {
 		for (String city : NewConstants.CITYS) {
 			domain = new WeatherDomain();
 			cwd = owm.currentWeatherByCityName(city);
-			
+
 			domain.setCity(cwd.getCityName());
 			domain.setTemperature(cwd.getMainData_Object().getTemperature());
 			domain.setMaxTemperature(cwd.getMainData_Object().getMaxTemperature());
@@ -37,7 +37,7 @@ public class WeatherServiceImple {
 			domain.setMaxCelsius(convertToCelsius(cwd.getMainData_Object().getMaxTemperature()) / 100);
 			domain.setMinCelsius(convertToCelsius(cwd.getMainData_Object().getMinTemperature()) / 100);
 			domain.setWindDegree(tool.convertDegree2Direction(cwd.getWind_Object().getWindDegree()));
-			
+
 			weathers.add(domain);
 		}
 

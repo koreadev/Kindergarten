@@ -24,6 +24,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		// Create ApplicationContext
 		AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
 		applicationContext.setConfigLocation(CONFIG_LOCATION);
+		servletContext.addListener(new ContextLoaderListener(applicationContext));
 
 		// Add the servlet mapping manually and make it initialize automatically
         DispatcherServlet dispatcherServlet = new DispatcherServlet(applicationContext);

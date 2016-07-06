@@ -24,7 +24,7 @@ import com.mybiz.common.web.config.util.CommonInterceptor;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.mybiz")
+@ComponentScan(basePackages = {"com.mybiz"})
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
 	/**
@@ -124,7 +124,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	@Bean(name = "messageSource")
 	public MessageSource messageSource() {
 		ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-		messageSource.setBasenames("classpath:messages/messages");
+		messageSource.setBasenames("classpath:messages/messages-properties");
 		messageSource.setDefaultEncoding("UTF-8");
 		messageSource.setCacheSeconds(0);
 
