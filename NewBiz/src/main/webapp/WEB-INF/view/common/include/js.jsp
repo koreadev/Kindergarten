@@ -41,8 +41,6 @@
 <script src="${pageContext.request.contextPath}/resources/bootstrap3/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <!-- Slimscroll -->
 <script src="${pageContext.request.contextPath}/resources/bootstrap3/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="${pageContext.request.contextPath}/resources/bootstrap3/plugins/fastclick/fastclick.min.js"></script>
 <!-- Chart -->
 <script src="${pageContext.request.contextPath}/resources/bootstrap3/plugins/chartjs/Chart.js"></script>
 
