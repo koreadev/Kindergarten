@@ -38,6 +38,9 @@
 	    <maven.war.version>2.5</maven.war.version>
 	    <tomcat.version>2.2</tomcat.version>
 
+	    <!-- Apache HttpClient -->
+	    <apache.httpclient.version>4.5.2</apache.httpclient.version>
+
 	</properties>
 
 	<dependencies>
@@ -127,6 +130,13 @@
 	        <artifactId>jackson-databind</artifactId>
 	        <version>2.4.3</version>
 	    </dependency>
+
+	    <!-- Apache httpclient -->
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>${apache.httpclient.version}</version>
+		</dependency>
 
 
 		<!-- Test Artifacts -->
