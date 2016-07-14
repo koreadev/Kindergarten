@@ -63,7 +63,7 @@ public class HttpClientSampleController {
     
   //Get Submit
     @RequestMapping(value="/getSubmit")
-    public void getSubmit(HttpServletRequest request) {
+    public String getSubmit(HttpServletRequest request) {
         System.out.println("FIRST");
         first();
         System.out.println("SECOND");
@@ -72,6 +72,8 @@ public class HttpClientSampleController {
         third();
         System.out.println("4번째");
         forth();
+        
+        return "main/test";
     }
     
     private void first() {
